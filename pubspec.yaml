@@ -37,7 +37,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider:
   font_awesome_flutter:
-  shimmer:
 dev_dependencies:
   flutter_test:
     sdk: flutter
