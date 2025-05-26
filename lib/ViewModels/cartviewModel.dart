@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../models/cart_items.dart';
 import '../models/product.dart';
-
 
 class CartViewModel with ChangeNotifier {
   List<CartItem> _cartItems = [];
@@ -26,7 +24,6 @@ class CartViewModel with ChangeNotifier {
     notifyListeners();
   }
 
-
   void removeFromCart(String productId) {
     _cartItems.removeWhere((item) => item.product.id == productId);
     notifyListeners();
@@ -39,6 +36,11 @@ class CartViewModel with ChangeNotifier {
     } else {
       removeFromCart(productId);
     }
+    notifyListeners();
+  }
+
+  void clearCart() {
+    _cartItems.clear();
     notifyListeners();
   }
 }
